@@ -1,0 +1,30 @@
+{
+	"compilerOptions": {
+		"sourceMap": true,
+		"target": "es2015",
+		"jsx": "react",
+		"module": "ESNext",
+		"allowJs": true,
+		"moduleResolution": "node",
+		"experimentalDecorators": true,
+		"noImplicitAny": false,
+		"skipLibCheck": true,
+		"alwaysStrict": true,
+		"allowSyntheticDefaultImports": true,
+		"declaration": false,
+		"removeComments": true,
+		"noImplicitReturns": false,
+		"noUnusedLocals": false,
+		"downlevelIteration": true,
+		"strict": true,
+		"outDir": "../build",
+		"lib": [
+			"es2017",
+			"dom"
+		]
+	},
+	"exclude": [
+		"../node_modules",
+		"dist"
+	]
+}

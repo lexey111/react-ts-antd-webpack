@@ -1,0 +1,23 @@
+@import "../../../styles/variables.less";
+
+.ant-breadcrumb {
+	padding: 16px 8px;
+	margin: 0;
+}
+
+.ant-affix {
+	.ant-breadcrumb {
+		background-color: @app-background;
+		padding-top: 8px;
+		padding-bottom: 8px;
+
+		&:after {
+			content: '';
+			display: block;
+			float: none;
+			border-top: 1px dashed @app-separator-color;
+			width: 100%;
+			margin-top: 8px;
+		}
+	}
+}

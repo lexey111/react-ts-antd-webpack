@@ -1,0 +1,40 @@
+@import "variables.less";
+
+body {
+	display: flex;
+	flex-flow: column nowrap;
+	min-height: 100vh;
+	min-width: 100vw;
+	align-items: center;
+}
+
+#app-mount-point, .app-container, .app-layout {
+	min-height: 100vh;
+	min-width: 100vw;
+	display: flex;
+	flex-flow: column nowrap;
+	align-items: center;
+	background-color: @app-background;
+
+	.app-content {
+		max-width: @app-page-width;
+		width: 100%;
+	}
+}
+
+.app-menu-affix {
+	width: 100%;
+}
+
+.app-footer {
+	border-top: 1px solid #e2e2e2;
+	min-width: 100vw;
+	display: flex;
+	padding: 8px 0;
+	flex-flow: column nowrap;
+}
+
+.app-page {
+	padding: 8px 8px 32px 8px;
+	min-width: 100%;
+}

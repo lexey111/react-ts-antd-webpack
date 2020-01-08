@@ -1,0 +1,66 @@
+@import "../../../styles/variables.less";
+
+.app-menu {
+	width: 100%;
+	height: @app-menu-height;
+	ul {
+		li {
+			line-height: @app-menu-height;
+		}
+	}
+
+}
+
+.app-main-menu-container {
+	max-width: @app-page-width;
+	margin: 0 auto;
+	line-height: @app-menu-height;
+	height: @app-menu-height;
+	display: flex;
+	flex-flow: column wrap;
+
+	a {
+		text-decoration: none;
+	}
+
+	.app-main-menu {
+		line-height: @app-menu-height;
+		height: @app-menu-height;
+		width: 100%;
+		display: flex;
+		flex-flow: row wrap;
+
+		.app-menu-item {
+			flex-grow: 0;
+			flex-shrink: 0;
+			align-content: center;
+			justify-content: center;
+			align-items: center;
+			justify-items: center;
+			height: @app-menu-height;
+			a {
+				display: inline-flex;
+				align-content: center;
+				justify-content: center;
+				align-items: center;
+				justify-items: center;
+
+				i {
+					display: inline-flex;
+				}
+			}
+		}
+
+		.app-menu-stub {
+			width: auto;
+			flex-grow: 2;
+			cursor: default;
+		}
+	}
+}
+
+.ant-menu-submenu-popup {
+	.app-menu-stub {
+		display: none;
+	}
+}
