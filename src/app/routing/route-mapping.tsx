@@ -6,6 +6,7 @@ import {DataPage} from '../pages/data';
 import {HomePage} from '../pages/home';
 import {SettingsPage} from '../pages/settings';
 import {UserPage} from '../pages/user';
+import {SettingOutlined, UserOutlined} from '@ant-design/icons';
 import {TRouteMappingItem, TRouteMappingItems} from './route-mapping-interface';
 import {prepareItems} from './route-mapping-utils';
 
@@ -16,8 +17,8 @@ export const RouteMapping: TRouteMappingItems = prepareItems([
 	{id: 'about', title: 'About', url: '/about', page: <AboutPage/>},
 	{id: 'author', title: 'Author', url: '/about/author', page: <AuthorPage/>},
 	{id: 'author-sub', title: 'Author sub-page', url: '/about/author/sub-page', page: <AuthorSubPage/>},
-	{id: 'settings', title: 'Settings', url: '/settings', page: <SettingsPage/>, isRightMenu: true, icon: 'setting'},
-	{id: 'user', title: 'User', url: '/user', page: <UserPage/>, isRightMenu: true, icon: 'user'},
+	{id: 'settings', title: 'Settings', url: '/settings', page: <SettingsPage/>, isRightMenu: true, icon: <SettingOutlined/>},
+	{id: 'user', title: 'User', url: '/user', page: <UserPage/>, isRightMenu: true, icon: <UserOutlined/>},
 ]);
 
 export const HomeRoute: TRouteMappingItem = RouteMapping.find(item => item.isHome) as TRouteMappingItem; // suppress "undefined"

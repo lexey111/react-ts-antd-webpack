@@ -1,4 +1,3 @@
-import Icon from 'antd/es/icon';
 import Menu from 'antd/es/menu';
 import React, {useEffect, useState} from 'react';
 import {Link, useLocation} from 'react-router-dom';
@@ -9,9 +8,8 @@ import {getRouteByUrl} from '../../routing/route-mapping-utils';
 type TMenuItems = Array<TRouteMappingItem & { isActive: boolean }>;
 
 function createMenuItem(item: TRouteMappingItem): React.ReactNode {
-	return <Menu.Item key={item.url} className={'app-menu-item'}>
+	return <Menu.Item key={item.url} className={'app-menu-item'} icon={item.icon}>
 		<Link to={item.url}>
-			{item.icon && <Icon type={item.icon}/>}
 			{item.title}
 		</Link>
 	</Menu.Item>;
@@ -57,6 +55,7 @@ export const AppMainMenu: React.FC = () => {
 			className={'app-main-menu'}
 			theme="dark"
 			mode="horizontal"
+			disabledOverflow={true}
 			selectedKeys={[activeItemKey]}>
 			{leftMenuItems.map(createMenuItem)}
 			<Menu.Item key={'menu-stub'} className={'app-menu-stub'} disabled={true}/>
